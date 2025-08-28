@@ -1,0 +1,2654 @@
+{
+  "tables": [
+    {
+      "name": "company_contact_person",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "company_contact_person_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "first_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "prefix",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "last_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "email_address",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "phone_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "login",
+          "type": "BIT"
+        },
+        {
+          "name": "view_all_files",
+          "type": "BIT"
+        },
+        {
+          "name": "insert_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insert_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "update_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "update_date_time",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "company_settings",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "file_start_number",
+          "type": "INT"
+        },
+        {
+          "name": "default_margin",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "reporting_color",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "customer_contact_person",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_contact_person_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "first_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "prefix",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "last_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "nickname",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "email_address",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "phone_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "client",
+          "type": "BIT"
+        },
+        {
+          "name": "different_invoice_address",
+          "type": "BIT"
+        },
+        {
+          "name": "beneficiary",
+          "type": "BIT"
+        },
+        {
+          "name": "holder_of_burial_rights",
+          "type": "BIT"
+        },
+        {
+          "name": "relation_to_deceased",
+          "type": "INT"
+        },
+        {
+          "name": "social_security_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "street_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "city_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "city_name_customer_contact_person_id",
+          "type": "INT"
+        },
+        {
+          "name": "gender",
+          "type": "INT"
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATETIME"
+        },
+        {
+          "name": "place_of_birth_id",
+          "type": "INT"
+        },
+        {
+          "name": "country_id",
+          "type": "INT"
+        },
+        {
+          "name": "insert_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insert_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "update_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "update_date_time",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "customer_file_insurance",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_insurance_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "insurance_company_id",
+          "type": "INT"
+        },
+        {
+          "name": "policy_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insured_amount",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "insurance_company",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "street_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "country",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "city_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "pro_forma_invoice",
+          "type": "BIT"
+        }
+      ]
+    },
+    {
+      "name": "country",
+      "columns": [
+        {
+          "name": "country_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "country_code",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "city",
+      "columns": [
+        {
+          "name": "country_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "city_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "city",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "report_text",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "header",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "closing",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "company_location",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "company_location_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "ar_location_id",
+          "type": "INT"
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "street_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "country_id",
+          "type": "INT"
+        },
+        {
+          "name": "city_id",
+          "type": "INT"
+        },
+        {
+          "name": "auditorium_present",
+          "type": "BIT"
+        },
+        {
+          "name": "auditorium_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "number_of_people",
+          "type": "INT"
+        },
+        {
+          "name": "auditorium_time",
+          "type": "TIME"
+        },
+        {
+          "name": "coffee_time",
+          "type": "TIME"
+        },
+        {
+          "name": "rate",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "phone_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "email",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "website",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "nearest_catering_with_hall",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "active",
+          "type": "BIT"
+        },
+        {
+          "name": "laying_out_location",
+          "type": "BIT"
+        },
+        {
+          "name": "condolence_location",
+          "type": "BIT"
+        },
+        {
+          "name": "funeral_service_location",
+          "type": "BIT"
+        },
+        {
+          "name": "get_together_location",
+          "type": "BIT"
+        },
+        {
+          "name": "crematorium",
+          "type": "BIT"
+        },
+        {
+          "name": "natural_cemetery",
+          "type": "BIT"
+        },
+        {
+          "name": "cemetery",
+          "type": "BIT"
+        },
+        {
+          "name": "favorite",
+          "type": "BIT"
+        }
+      ]
+    },
+    {
+      "name": "customer_file",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "file_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "file_status",
+          "type": "INT"
+        },
+        {
+          "name": "funeral_director_id",
+          "type": "INT"
+        },
+        {
+          "name": "first_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "prefix",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "last_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "nickname",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "married_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATETIME"
+        },
+        {
+          "name": "country_of_birth_id",
+          "type": "INT"
+        },
+        {
+          "name": "place_of_birth_id",
+          "type": "INT"
+        },
+        {
+          "name": "gender",
+          "type": "INT"
+        },
+        {
+          "name": "street_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "apartment",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "residence_id",
+          "type": "INT"
+        },
+        {
+          "name": "residence",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "country_id",
+          "type": "INT"
+        },
+        {
+          "name": "country",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "social_security_number_nl",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "nationality_id",
+          "type": "INT"
+        },
+        {
+          "name": "remark",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "type_of_funeral",
+          "type": "INT"
+        },
+        {
+          "name": "date_of_funeral",
+          "type": "DATETIME"
+        },
+        {
+          "name": "service_start_time",
+          "type": "TIME"
+        },
+        {
+          "name": "service_end_time",
+          "type": "TIME"
+        },
+        {
+          "name": "funeral_service_location_id",
+          "type": "INT"
+        },
+        {
+          "name": "funeral_service_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "funeral_service_rate",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "funeral_location_id",
+          "type": "INT"
+        },
+        {
+          "name": "funeral_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "funeral_duration",
+          "type": "INT"
+        },
+        {
+          "name": "coffee_time",
+          "type": "INT"
+        },
+        {
+          "name": "funeral_location_rate",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "treated_with_radionuclides_in_the_past_12_months",
+          "type": "BIT"
+        },
+        {
+          "name": "pacemaker",
+          "type": "BIT"
+        },
+        {
+          "name": "deceased",
+          "type": "BIT"
+        },
+        {
+          "name": "deceased_sequence_number",
+          "type": "INT"
+        },
+        {
+          "name": "date_of_death",
+          "type": "DATETIME"
+        },
+        {
+          "name": "location_of_death",
+          "type": "INT"
+        },
+        {
+          "name": "street_name_death",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number_death",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "apartment_death",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code_death",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "city_name_death_id",
+          "type": "INT"
+        },
+        {
+          "name": "city_name_death",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "department",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "room",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "phone_number_location",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "doctor_visit",
+          "type": "BIT"
+        },
+        {
+          "name": "marital_status",
+          "type": "INT"
+        },
+        {
+          "name": "religion",
+          "type": "INT"
+        },
+        {
+          "name": "laying_out_location_id",
+          "type": "INT"
+        },
+        {
+          "name": "start_date_laying_out",
+          "type": "DATETIME"
+        },
+        {
+          "name": "end_date_laying_out",
+          "type": "DATETIME"
+        },
+        {
+          "name": "rate_laying_out",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "condolence_location_id",
+          "type": "INT"
+        },
+        {
+          "name": "date_of_condolence",
+          "type": "DATETIME"
+        },
+        {
+          "name": "start_time_condolence",
+          "type": "TIME"
+        },
+        {
+          "name": "end_time_condolence",
+          "type": "TIME"
+        },
+        {
+          "name": "rate_condolence",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "number_of_people_funeral_service",
+          "type": "INT"
+        },
+        {
+          "name": "name_auditorium",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "farewell_beforehand",
+          "type": "BIT"
+        },
+        {
+          "name": "start_time_farewell",
+          "type": "TIME"
+        },
+        {
+          "name": "get_together_location_id",
+          "type": "INT"
+        },
+        {
+          "name": "get_together_start_time",
+          "type": "TIME"
+        },
+        {
+          "name": "get_together_end_time",
+          "type": "TIME"
+        },
+        {
+          "name": "rate_get_together",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "remark_lvc",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "free_field",
+          "type": "BIT"
+        },
+        {
+          "name": "free_field_additional_wishes",
+          "type": "BIT"
+        },
+        {
+          "name": "free_field_catering",
+          "type": "BIT"
+        },
+        {
+          "name": "remark_lvc_catering",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "remark_lvc_additional_wishes",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "grave",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "grave_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "in_which_is_buried",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "remove_monument_by",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "different_size_coffin",
+          "type": "BIT"
+        },
+        {
+          "name": "shuffle",
+          "type": "BIT"
+        },
+        {
+          "name": "make_grave_green",
+          "type": "BIT"
+        },
+        {
+          "name": "collect_headstone",
+          "type": "BIT"
+        },
+        {
+          "name": "burial_vault",
+          "type": "BIT"
+        },
+        {
+          "name": "number_of_years_grave_right",
+          "type": "INT"
+        },
+        {
+          "name": "sound_at_grave",
+          "type": "BIT"
+        },
+        {
+          "name": "need_portable_stretcher",
+          "type": "BIT"
+        },
+        {
+          "name": "grave_marker",
+          "type": "BIT"
+        },
+        {
+          "name": "lower_coffin",
+          "type": "BIT"
+        },
+        {
+          "name": "scoop_of_sand",
+          "type": "BIT"
+        },
+        {
+          "name": "lift_or_ropes",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "departure_family",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "second_laying_out_location",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "start_date_laying_out_two",
+          "type": "DATETIME"
+        },
+        {
+          "name": "end_date_laying_out_two",
+          "type": "DATETIME"
+        },
+        {
+          "name": "church_service",
+          "type": "BIT"
+        },
+        {
+          "name": "name_church",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "street_name_church",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number_church",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code_church",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "city_name_church",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "name_clergyman",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "start_church_service",
+          "type": "TIME"
+        },
+        {
+          "name": "duration_church_service",
+          "type": "INT"
+        },
+        {
+          "name": "bell_ringing",
+          "type": "BIT"
+        },
+        {
+          "name": "bearers",
+          "type": "BIT"
+        },
+        {
+          "name": "number_of_bearers",
+          "type": "INT"
+        },
+        {
+          "name": "precede",
+          "type": "TIME"
+        },
+        {
+          "name": "location_precede",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "date_church_service",
+          "type": "DATETIME"
+        },
+        {
+          "name": "number_of_people_funeral",
+          "type": "INT"
+        },
+        {
+          "name": "insert_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insert_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "update_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "update_date_time",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "company",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "phone_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "website",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "email",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "street_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "city_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "account_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "chamber_of_commerce_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "vat_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "year_founded",
+          "type": "INT"
+        },
+        {
+          "name": "number_of_employees",
+          "type": "INT"
+        },
+        {
+          "name": "active",
+          "type": "BIT"
+        },
+        {
+          "name": "logo_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "logo_data",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "ar_partner",
+          "type": "BIT"
+        },
+        {
+          "name": "insert_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insert_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "update_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "update_date_time",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "invoice",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "invoice_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "invoice_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "invoice_status",
+          "type": "INT"
+        },
+        {
+          "name": "total_amount_excl_vat",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "total_amount_incl_vat",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "first_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "prefix",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "last_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "date_of_death",
+          "type": "DATETIME"
+        },
+        {
+          "name": "client_id",
+          "type": "INT"
+        },
+        {
+          "name": "type_of_invoice",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "name": "vat_percentage",
+      "columns": [
+        {
+          "name": "vat_percentage_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "vat_code",
+          "type": "INT"
+        },
+        {
+          "name": "percentage",
+          "type": "DECIMAL"
+        }
+      ]
+    },
+    {
+      "name": "invoice_line",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "invoice_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "invoice_line_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "order_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "product_group_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "product_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "quantity",
+          "type": "INT"
+        },
+        {
+          "name": "price_per_piece",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "total_price",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "shipping_costs",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "vat_percentage_id",
+          "type": "INT"
+        },
+        {
+          "name": "total_price_incl_vat",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "delivery_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "delivered_by",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "product_group_id",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "name": "product_group",
+      "columns": [
+        {
+          "name": "product_group_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "group_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "default_group",
+          "type": "BIT"
+        },
+        {
+          "name": "sequence_number",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "name": "company_default_product_group",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "product_group_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "sequence_number",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "name": "customer_file_order",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_order_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "sequence_number",
+          "type": "INT"
+        },
+        {
+          "name": "order_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "remark",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "quantity",
+          "type": "INT"
+        },
+        {
+          "name": "product_id",
+          "type": "INT"
+        },
+        {
+          "name": "price_per_piece",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "total_price",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "shipping_costs",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "vat_percentage_id",
+          "type": "INT"
+        },
+        {
+          "name": "total_price_incl_vat",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "delivery_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "delivered_by",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "product_group_id",
+          "type": "INT"
+        },
+        {
+          "name": "departure_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "from_location",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "arrival_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "to_location",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "product",
+      "columns": [
+        {
+          "name": "product_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "product_group_id",
+          "type": "INT"
+        },
+        {
+          "name": "product_domain",
+          "type": "INT"
+        },
+        {
+          "name": "product_type",
+          "type": "INT"
+        },
+        {
+          "name": "product_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "product_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "product_description",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "personalize",
+          "type": "BIT"
+        },
+        {
+          "name": "supplier_id",
+          "type": "INT"
+        },
+        {
+          "name": "purchase_price",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "selling_price_ar_partner",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "selling_price_funeral_director",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "shipping_costs_regular",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "shipping_costs_express",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "vat_percentage_id",
+          "type": "INT"
+        },
+        {
+          "name": "available",
+          "type": "BIT"
+        },
+        {
+          "name": "company_id",
+          "type": "INT"
+        },
+        {
+          "name": "ar_product",
+          "type": "BIT"
+        }
+      ]
+    },
+    {
+      "name": "ar_location",
+      "columns": [
+        {
+          "name": "location_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "street_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "country_id",
+          "type": "INT"
+        },
+        {
+          "name": "city_id",
+          "type": "INT"
+        },
+        {
+          "name": "auditorium_present",
+          "type": "BIT"
+        },
+        {
+          "name": "phone_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "email",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "website",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "nearest_catering_with_hall",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "rate",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "active",
+          "type": "BIT"
+        },
+        {
+          "name": "laying_out_location",
+          "type": "BIT"
+        },
+        {
+          "name": "condolence_location",
+          "type": "BIT"
+        },
+        {
+          "name": "funeral_service_location",
+          "type": "BIT"
+        },
+        {
+          "name": "get_together_location",
+          "type": "BIT"
+        },
+        {
+          "name": "crematorium",
+          "type": "BIT"
+        },
+        {
+          "name": "natural_cemetery",
+          "type": "BIT"
+        },
+        {
+          "name": "cemetery",
+          "type": "BIT"
+        }
+      ]
+    },
+    {
+      "name": "ar_location_attachment",
+      "columns": [
+        {
+          "name": "location_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "location_attachment_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "description",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_data",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "ar_questionnaire",
+      "columns": [
+        {
+          "name": "questionnaire_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "creation_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "active",
+          "type": "BIT"
+        }
+      ]
+    },
+    {
+      "name": "ar_questionnaire_group",
+      "columns": [
+        {
+          "name": "questionnaire_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_group_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "sequence_number",
+          "type": "INT"
+        },
+        {
+          "name": "group",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "ar_questionnaire_group_question",
+      "columns": [
+        {
+          "name": "questionnaire_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_group_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_question_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "sequence_number",
+          "type": "INT"
+        },
+        {
+          "name": "question",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "data_type",
+          "type": "INT"
+        },
+        {
+          "name": "questionnaire_choice_list_id",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "name": "ar_questionnaire_group_question_document",
+      "columns": [
+        {
+          "name": "questionnaire_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_group_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_question_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_document_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_data",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "ar_questionnaire_choice_list",
+      "columns": [
+        {
+          "name": "questionnaire_choice_list_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "ar_questionnaire_choice_list_option",
+      "columns": [
+        {
+          "name": "questionnaire_choice_list_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_choice_list_option_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "company_location_attachment",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "company_location_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "company_location_attachment_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "description",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_data",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "company_product",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "product_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "product_description",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "active",
+          "type": "BIT"
+        },
+        {
+          "name": "purchase_price",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "selling_price",
+          "type": "DECIMAL"
+        }
+      ]
+    },
+    {
+      "name": "client_file_interview",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "client_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "interview_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "interview_transcript",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "company_bundle",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "bundle_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "funeral_service_playlist",
+          "type": "BIT"
+        },
+        {
+          "name": "bereavement_service",
+          "type": "BIT"
+        },
+        {
+          "name": "farewell_page",
+          "type": "BIT"
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "columns": [
+        {
+          "name": "usr_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "email",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insert_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insert_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "update_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "update_date_time",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "incoming_message",
+      "columns": [
+        {
+          "name": "incoming_message_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "company_id",
+          "type": "INT"
+        },
+        {
+          "name": "client_file_id",
+          "type": "INT"
+        },
+        {
+          "name": "content",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "target",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "status_message",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "external_reference_id",
+          "type": "INT"
+        },
+        {
+          "name": "created_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "processed_date_time",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "customer_documents",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_document_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_data",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "description",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insert_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insert_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "update_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "update_date_time",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "customer_file_order_personalize",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_order_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_order_personalize_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "description",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "photo_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "photo_data",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "customer_file_note",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_note_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "type_of_note",
+          "type": "INT"
+        },
+        {
+          "name": "note",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "insert_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "insert_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "update_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "update_date_time",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "supplier",
+      "columns": [
+        {
+          "name": "supplier_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "supplier_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "phone_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "website",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "email",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "street_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "city_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "account_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "chamber_of_commerce_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "vat_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "active",
+          "type": "BIT"
+        },
+        {
+          "name": "phone_number_supplier_contact_person",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "supplier_contact_person",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "first_name",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "message",
+      "columns": [
+        {
+          "name": "message_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "message_name",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "model_table",
+      "columns": [
+        {
+          "name": "tab_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "icon",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "icon_data",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "tab_translation",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "model_table_column",
+      "columns": [
+        {
+          "name": "tab_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "col_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "show",
+          "type": "BIT"
+        },
+        {
+          "name": "col_translation",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "nationality",
+      "columns": [
+        {
+          "name": "nationality_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "nationality",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "outgoing_message",
+      "columns": [
+        {
+          "name": "outgoing_message_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "company_id",
+          "type": "INT"
+        },
+        {
+          "name": "client_file_id",
+          "type": "INT"
+        },
+        {
+          "name": "message_id",
+          "type": "INT"
+        },
+        {
+          "name": "http_method",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "web_url",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "bearer_token",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "content_type",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "content",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "status_message",
+          "type": "INT"
+        },
+        {
+          "name": "code_status",
+          "type": "INT"
+        },
+        {
+          "name": "external_reference_id",
+          "type": "INT"
+        },
+        {
+          "name": "created_date_time",
+          "type": "DATETIME"
+        },
+        {
+          "name": "processed_date_time",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "product_attachment",
+      "columns": [
+        {
+          "name": "product_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "product_attachment_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "description",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_data",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "attachment_company_id",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "name": "product_supplier",
+      "columns": [
+        {
+          "name": "product_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "supplier_id",
+          "type": "INT",
+          "is_primary_key": true
+        }
+      ]
+    },
+    {
+      "name": "product_stock_mutation",
+      "columns": [
+        {
+          "name": "product_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "supplier_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "product_stock_mutation_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "type_of_mutation",
+          "type": "INT"
+        },
+        {
+          "name": "quantity",
+          "type": "INT"
+        },
+        {
+          "name": "company_id",
+          "type": "INT"
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT"
+        },
+        {
+          "name": "customer_file_order_id",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "name": "sf_model_info",
+      "columns": [
+        {
+          "name": "sf_model_info_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "sf_server",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "sf_database",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "sf_model",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "sf_branch",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "sf_model_vrs",
+          "type": "DATETIME"
+        },
+        {
+          "name": "sf_model_vrs_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "previous_branch",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "previous_model_vrs",
+          "type": "DATETIME"
+        },
+        {
+          "name": "generated_by_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "generated_on_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "created_by_user",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "created_on_date",
+          "type": "DATETIME"
+        }
+      ]
+    },
+    {
+      "name": "upgrade_info",
+      "columns": [
+        {
+          "name": "db_structure",
+          "type": "BIT"
+        },
+        {
+          "name": "data_upgrade",
+          "type": "BIT"
+        }
+      ]
+    },
+    {
+      "name": "insurance_company",
+      "columns": [
+        {
+          "name": "insurance_company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "street_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "house_number",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "postal_code",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "country_id",
+          "type": "INT"
+        },
+        {
+          "name": "city_id",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "name": "questionnaire",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "creation_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "active",
+          "type": "BIT"
+        }
+      ]
+    },
+    {
+      "name": "questionnaire_group",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_group_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "sequence_number",
+          "type": "INT"
+        },
+        {
+          "name": "group",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "questionnaire_group_answer",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_group_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "sequence_number",
+          "type": "INT"
+        },
+        {
+          "name": "group",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "questionnaire_group_question",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_group_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_question_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "sequence_number",
+          "type": "INT"
+        },
+        {
+          "name": "question",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "data_type",
+          "type": "INT"
+        },
+        {
+          "name": "questionnaire_choice_list_id",
+          "type": "INT"
+        }
+      ]
+    },
+    {
+      "name": "questionnaire_group_question_document",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_group_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_question_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_document_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_name",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "document_data",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "questionnaire_choice_list",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_choice_list_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "questionnaire_choice_list_option",
+      "columns": [
+        {
+          "name": "company_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_choice_list_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "questionnaire_choice_list_option_id",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "type": "NVARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "questionnaire_question_answer",
+      "columns": [
+        {
+          "name": "questionnaire_question_answer",
+          "type": "INT",
+          "is_primary_key": true
+        },
+        {
+          "name": "company_id",
+          "type": "INT"
+        },
+        {
+          "name": "customer_file_id",
+          "type": "INT"
+        },
+        {
+          "name": "questionnaire_id",
+          "type": "INT"
+        },
+        {
+          "name": "questionnaire_group_id",
+          "type": "INT"
+        },
+        {
+          "name": "questionnaire_question_id",
+          "type": "INT"
+        },
+        {
+          "name": "answer_text",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "answer_number",
+          "type": "DECIMAL"
+        },
+        {
+          "name": "answer_date",
+          "type": "DATETIME"
+        },
+        {
+          "name": "answer_checkbox",
+          "type": "BIT"
+        },
+        {
+          "name": "questionnaire_choice_list_id",
+          "type": "INT"
+        },
+        {
+          "name": "questionnaire_choice_list_option_id",
+          "type": "INT"
+        },
+        {
+          "name": "explanation_of_answer",
+          "type": "NVARCHAR"
+        },
+        {
+          "name": "question_label",
+          "type": "NVARCHAR"
+        }
+      ]
+    }
+  ]
+}
